@@ -134,13 +134,13 @@ export function WineList() {
                     quality={85}
                     className="scale-105 object-cover opacity-100"
                   />
-                  <div className="absolute inset-0 bg-ink/20" />
-                  <div className="absolute inset-0 bg-gradient-to-b from-ink/10 via-ink/25 to-ink/45" />
+                  <div className="absolute inset-0 bg-ink/45" />
+                  <div className="absolute inset-0 bg-gradient-to-b from-ink/35 via-ink/50 to-ink/65" />
                 </div>
 
-                <div className="relative z-10 bg-ink/40 px-4 py-8 backdrop-blur-sm sm:px-6 sm:py-10 md:px-8">
+                <div className="relative z-10 bg-ink/70 px-4 py-8 backdrop-blur-md sm:px-6 sm:py-10 md:px-8">
                   <div className="border-b border-cream/25 pb-4">
-                    <h2 className="font-display text-3xl text-cream drop-shadow-[0_1px_8px_rgba(0,0,0,0.55)] sm:text-4xl md:text-5xl">
+                    <h2 className="font-display text-3xl text-cream drop-shadow-[0_2px_8px_rgba(0,0,0,0.75)] sm:text-4xl md:text-5xl">
                       {group.title}
                     </h2>
                   </div>
