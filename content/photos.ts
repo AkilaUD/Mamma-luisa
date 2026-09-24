@@ -114,6 +114,7 @@ export const images = {
   atmosphere: "/images/gallery/12.jpg?v=2",
   house: "/images/brand/mama-luisa.jpg?v=2",
   logoArt: "/images/brand/logo-art.jpg?v=2",
+  logo: "/images/brand/logo.png",
   menuBanner: "/images/pages/Mamma-Luisa_18.jpg?v=2",
   wineBanner: "/images/pages/Mamma-Luisa_13.jpg?v=2",
   aboutBanner: "/images/pages/Mamma-Luisa_47.jpg?v=2",

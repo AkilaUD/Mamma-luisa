@@ -112,8 +112,11 @@ export function Navbar() {
       <div
         id="mobile-nav"
         className={`fixed inset-0 z-40 bg-ink transition-transform duration-500 lg:hidden ${
-          open ? "translate-y-0" : "-translate-y-full"
+          open
+            ? "translate-y-0"
+            : "pointer-events-none -translate-y-[calc(100%+5rem)]"
         }`}
+        aria-hidden={!open}
       >
         <div className="flex h-full flex-col px-6 pb-10 pt-24">
           <nav className="flex flex-col gap-6" aria-label="Mobile">

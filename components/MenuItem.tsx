@@ -13,20 +13,29 @@ export function MenuItem({ item, light = false }: Props) {
 
   return (
     <article className="py-5">
-      <div className="flex items-baseline gap-2">
-        <h3 className={`font-display text-2xl md:text-[1.65rem] ${nameColor}`}>
+      <div className="flex min-w-0 items-baseline gap-2">
+        <h3
+          className={`min-w-0 font-display text-xl leading-snug break-words sm:text-2xl md:text-[1.65rem] ${nameColor}`}
+        >
           {item.asterisk ? "*" : ""}
           {item.name}
           {item.note ? (
-            <span className={`ml-2 font-sans text-xs tracking-wide ${noteColor}`}>
+            <span
+              className={`ml-2 font-sans text-xs tracking-wide ${noteColor}`}
+            >
               ({item.note})
             </span>
           ) : null}
         </h3>
         {item.price ? (
           <>
-            <span className={`price-leader ${light ? "border-ink/25" : ""}`} aria-hidden />
-            <span className={`shrink-0 font-sans text-sm tabular-nums ${priceColor}`}>
+            <span
+              className={`price-leader max-sm:hidden ${light ? "border-ink/25" : ""}`}
+              aria-hidden
+            />
+            <span
+              className={`shrink-0 font-sans text-sm tabular-nums ${priceColor}`}
+            >
               {item.price}
             </span>
           </>
@@ -40,7 +49,7 @@ export function MenuItem({ item, light = false }: Props) {
       {item.variants?.length ? (
         <ul className={`mt-3 space-y-1.5 text-sm ${descColor}`}>
           {item.variants.map((v) => (
-            <li key={v.name}>
+            <li key={v.name} className="break-words">
               <span className={`font-medium ${nameColor}`}>{v.name}:</span>{" "}
               {v.description}
             </li>

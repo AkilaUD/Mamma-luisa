@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import { images } from "@/content/photos";
 import { site } from "@/content/site";
 
 export function Footer() {
@@ -9,15 +11,15 @@ export function Footer() {
       <div className="mx-auto max-w-[1440px] px-5 py-20 md:px-10 md:py-28">
         <div className="grid gap-16 lg:grid-cols-12">
           <div className="lg:col-span-5">
-            <p className="text-[11px] tracking-[0.32em] uppercase text-metal">
-              Est. {site.established}
-            </p>
-            <h2 className="mt-4 font-display text-5xl text-cream md:text-6xl">
-              Mamma Luisa
-            </h2>
-            <p className="mt-3 text-sm tracking-[0.18em] uppercase text-cream-muted">
-              {site.tagline}
-            </p>
+            <Link href="/" className="inline-block">
+              <Image
+                src={images.logo}
+                alt="Mamma Luisa"
+                width={500}
+                height={302}
+                className="h-auto w-[200px] md:w-[240px]"
+              />
+            </Link>
             <div className="mt-10 space-y-2 text-cream-soft">
               <p>{site.address.street}</p>
               <p>
