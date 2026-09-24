@@ -125,3 +125,28 @@ export const images = {
   featureBg: "/images/pages/feature.jpg?v=2",
   og: "/images/gallery/10.jpg?v=2",
 } as const;
+
+/** Per-category backdrop photos for the menu page */
+export const menuSectionImages: Record<string, string> = {
+  antipasti: "/images/gallery/8.jpg?v=2",
+  pasta: images.pasta,
+  secondi: images.menuBanner,
+  verdure: images.secondi,
+  vegetariano: "/images/gallery/3.jpg?v=2",
+  beverages: images.wine,
+  dolci: "/images/gallery/13.jpg?v=2",
+};
+
+/** Per-region backdrop photos for the wine page */
+export const wineSectionImages: Record<string, string> = {
+  "italy-regions": images.wine,
+  piedmont: images.wineBanner,
+  "traditional-tuscan": "/images/gallery/13.jpg?v=2",
+  supertuscan: "/images/gallery/7.jpg?v=2",
+  chianti: images.atmosphere,
+  brunello: "/images/gallery/16.jpg?v=2",
+  international: "/images/gallery/11.jpg?v=2",
+  "cabernet-merlot": images.wine,
+  "blends-zin-syrah": images.wineBanner,
+  "other-grapes": "/images/gallery/13.jpg?v=2",
+};

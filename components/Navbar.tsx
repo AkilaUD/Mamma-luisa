@@ -1,12 +1,16 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { site } from "@/content/site";
 
 export function Navbar() {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const isHome = pathname === "/";
+  const solid = !isHome || scrolled || open;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -26,9 +30,9 @@ export function Navbar() {
     <>
       <header
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-          scrolled || open
-            ? "bg-ink/95 backdrop-blur-md border-b border-cream/10"
-            : "bg-transparent"
+          solid
+            ? "border-b border-cream/10 bg-ink"
+            : "border-b border-transparent bg-transparent"
         }`}
       >
         <div className="mx-auto flex h-16 max-w-[1440px] items-center justify-between px-5 md:h-20 md:px-10">
@@ -74,7 +78,7 @@ export function Navbar() {
               href={site.links.resy}
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-metal/70 px-3 py-2 text-[10px] tracking-[0.2em] uppercase text-cream"
+              className="inline-flex min-h-11 items-center border border-metal/70 px-3 py-2.5 text-[11px] tracking-[0.2em] uppercase text-cream"
             >
               Reserve
             </a>
@@ -83,7 +87,7 @@ export function Navbar() {
               aria-expanded={open}
               aria-controls="mobile-nav"
               aria-label={open ? "Close menu" : "Open menu"}
-              className="flex h-10 w-10 items-center justify-center border border-cream/20 text-cream"
+              className="flex h-11 w-11 items-center justify-center border border-cream/20 text-cream"
               onClick={() => setOpen((v) => !v)}
             >
               <span className="sr-only">Menu</span>
@@ -118,7 +122,7 @@ export function Navbar() {
         }`}
         aria-hidden={!open}
       >
-        <div className="flex h-full flex-col px-6 pb-10 pt-24">
+        <div className="flex h-full flex-col overflow-y-auto overscroll-contain px-6 pb-10 pt-24">
           <nav className="flex flex-col gap-6" aria-label="Mobile">
             {site.nav.map((item) => (
               <Link

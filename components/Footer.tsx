@@ -17,6 +17,7 @@ export function Footer() {
                 alt="Mamma Luisa"
                 width={500}
                 height={302}
+                sizes="240px"
                 className="h-auto w-[200px] md:w-[240px]"
               />
             </Link>

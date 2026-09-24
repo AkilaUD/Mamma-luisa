@@ -65,7 +65,7 @@ export function ExperienceSection() {
                 {feature.title === "The Table" ? (
                   <Link
                     href="/menu"
-                    className="mt-8 inline-flex text-[11px] tracking-[0.22em] uppercase text-accent"
+                    className="mt-8 inline-flex min-h-11 items-center py-3 text-[11px] tracking-[0.22em] uppercase text-accent"
                   >
                     See the Menu
                   </Link>
@@ -73,7 +73,7 @@ export function ExperienceSection() {
                 {feature.title === "Take Out" ? (
                   <a
                     href={site.phone.tel}
-                    className="mt-8 inline-flex text-[11px] tracking-[0.22em] uppercase text-accent"
+                    className="mt-8 inline-flex min-h-11 items-center py-3 text-[11px] tracking-[0.22em] uppercase text-accent"
                   >
                     Call {site.phone.display}
                   </a>

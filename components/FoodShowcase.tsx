@@ -18,14 +18,14 @@ function DishRow({
   light?: boolean;
 }) {
   return (
-    <div className="border-b border-current/10 py-5 last:border-0">
-      <div className="flex items-baseline gap-3">
+    <div className="min-w-0 border-b border-current/10 py-5 last:border-0">
+      <div className="flex min-w-0 items-baseline gap-2 sm:gap-3">
         <h3
-          className={`font-display text-2xl ${light ? "text-ink" : "text-cream"}`}
+          className={`min-w-0 font-display text-xl leading-snug break-words sm:text-2xl ${light ? "text-ink" : "text-cream"}`}
         >
           {name}
         </h3>
-        <span className="price-leader" aria-hidden />
+        <span className="price-leader max-sm:hidden" aria-hidden />
         <span
           className={`shrink-0 text-sm tabular-nums ${
             light ? "text-ink/70" : "text-cream-soft"

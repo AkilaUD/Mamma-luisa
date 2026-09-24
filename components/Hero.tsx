@@ -36,7 +36,7 @@ export function Hero() {
           </motion.p>
 
           <motion.h1
-            className="mt-6 font-display text-[clamp(4.2rem,14vw,9.5rem)] font-medium leading-[0.88] tracking-[-0.03em] text-cream"
+            className="mt-6 font-display text-[clamp(3.25rem,14vw,9.5rem)] font-medium leading-[0.88] tracking-[-0.03em] text-cream"
             initial={reduceMotion ? false : { opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
@@ -69,7 +69,7 @@ export function Hero() {
             </Button>
             <a
               href={site.phone.tel}
-              className="px-1 py-3 text-[11px] tracking-[0.22em] uppercase text-cream-soft/80 transition-colors hover:text-cream sm:ml-1"
+              className="inline-flex min-h-11 items-center px-3 py-3 text-[11px] tracking-[0.22em] uppercase text-cream-soft/80 transition-colors hover:text-cream sm:ml-1"
             >
               Take Out
             </a>

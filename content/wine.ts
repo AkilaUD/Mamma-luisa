@@ -6,6 +6,7 @@ export type Wine = {
 export type WineGroup = {
   id: string;
   title: string;
+  shortTitle?: string;
   subtitle?: string;
   wines: Wine[];
 };
@@ -16,6 +17,7 @@ export const wineGroups: WineGroup[] = [
   {
     id: "italy-regions",
     title: "From the Northern, Central and Southern Regions of Italy",
+    shortTitle: "Italian Regions",
     wines: [
       { name: 'Arnad Montjovet, Nebbiolo "La Kiuva" 2018 (Val D\'Aosta)', price: "68" },
       { name: 'Conte Brandolini, Merlot "Stomo" 2018 (Friuli)', price: "39" },
@@ -202,6 +204,7 @@ export const wineGroups: WineGroup[] = [
   {
     id: "cabernet-merlot",
     title: "Cabernet, Merlot & Blends (USA & Italy)",
+    shortTitle: "Cabernet & Merlot",
     wines: [
       { name: "Duckhorn, Napa Merlot 2019 (California)", price: "90" },
       { name: "Castle Rock, Merlot 2020 (California)", price: "36" },
@@ -222,6 +225,7 @@ export const wineGroups: WineGroup[] = [
   {
     id: "blends-zin-syrah",
     title: "Red blends, Zinfandel, Syrah & More",
+    shortTitle: "Blends & Syrah",
     wines: [
       {
         name: 'The Prisoner Wine Company "THE PRISONER" Red Blend 2021',
@@ -237,6 +241,7 @@ export const wineGroups: WineGroup[] = [
   {
     id: "other-grapes",
     title: "Other Grapes – California & Italy",
+    shortTitle: "Other Grapes",
     wines: [
       { name: "Ferrari Carano SIENA 2021 Sangiovese", price: "48" },
       { name: "Spellbound PETIT SIRAH 2022", price: "36" },

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { MenuList } from "@/components/MenuList";
 import { PageHero } from "@/components/PageHero";
 import { images } from "@/content/photos";
@@ -25,22 +24,8 @@ export default function MenuPage() {
           gluten free.
         </p>
       </PageHero>
-      <section className="relative overflow-hidden px-5 py-16 md:px-10 md:py-24">
-        <div className="pointer-events-none absolute inset-0" aria-hidden>
-          <Image
-            src={images.menuBanner}
-            alt=""
-            fill
-            sizes="100vw"
-            quality={75}
-            className="scale-110 object-cover opacity-55 blur-xl"
-          />
-          <div className="absolute inset-0 bg-ink/50" />
-          <div className="absolute inset-0 bg-gradient-to-b from-ink/40 via-ink/55 to-ink/70" />
-        </div>
-        <div className="relative z-10">
-          <MenuList />
-        </div>
+      <section className="bg-ink px-5 py-16 md:px-10 md:py-24">
+        <MenuList />
       </section>
     </>
   );

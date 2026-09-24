@@ -75,7 +75,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${cormorant.variable} ${manrope.variable} h-full`}>
-      <body className="min-h-full bg-ink text-cream antialiased">
+      <body className="flex min-h-full flex-col overflow-x-clip bg-ink text-cream antialiased">
         <JsonLd />
         <Navbar />
         <main className="flex-1">{children}</main>
