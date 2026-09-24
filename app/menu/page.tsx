@@ -33,10 +33,10 @@ export default function MenuPage() {
             fill
             sizes="100vw"
             quality={75}
-            className="scale-110 object-cover opacity-35 blur-2xl"
+            className="scale-110 object-cover opacity-55 blur-xl"
           />
-          <div className="absolute inset-0 bg-ink/85" />
-          <div className="absolute inset-0 bg-gradient-to-b from-ink/70 via-ink/80 to-ink/95" />
+          <div className="absolute inset-0 bg-ink/50" />
+          <div className="absolute inset-0 bg-gradient-to-b from-ink/40 via-ink/55 to-ink/70" />
         </div>
         <div className="relative z-10">
           <MenuList />
