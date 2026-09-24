@@ -1,26 +1,95 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --ink: #171310;
+  --ink-soft: #211a15;
+  --ink-mid: #2a211a;
+  --paper: #f3ebdd;
+  --paper-soft: #e7dcc8;
+  --paper-deep: #d8c8ae;
+  --text: #f8f2e8;
+  --text-soft: #d9ccba;
+  --text-muted: #afa18d;
+  --accent: #8b332a;
+  --olive: #6b6945;
+  --metal: #b59a68;
+  --background: var(--ink);
+  --foreground: var(--text);
 }
 
 @theme inline {
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-mid: var(--ink-mid);
+  --color-paper: var(--paper);
+  --color-paper-soft: var(--paper-soft);
+  --color-paper-deep: var(--paper-deep);
+  --color-cream: var(--text);
+  --color-cream-soft: var(--text-soft);
+  --color-cream-muted: var(--text-muted);
+  --color-accent: var(--accent);
+  --color-olive: var(--olive);
+  --color-metal: var(--metal);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-cormorant);
+  --font-sans: var(--font-manrope);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--ink);
+  color: var(--text);
+  font-family: var(--font-manrope), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent) 70%, transparent);
+  color: var(--text);
+}
+
+:focus-visible {
+  outline: 2px solid var(--metal);
+  outline-offset: 3px;
+}
+
+.font-display {
+  font-family: var(--font-cormorant), Georgia, "Times New Roman", serif;
+}
+
+.hairline {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in srgb, var(--metal) 55%, transparent),
+    transparent
+  );
+}
+
+.price-leader {
+  flex: 1;
+  border-bottom: 1px dotted color-mix(in srgb, currentColor 35%, transparent);
+  margin: 0 0.75rem 0.35rem;
+  min-width: 1.5rem;
+  transform: translateY(-0.15em);
 }

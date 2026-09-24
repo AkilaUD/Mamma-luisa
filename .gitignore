@@ -24,6 +24,10 @@
 .DS_Store
 *.pem
 
+# local image tooling / backups
+.tools/
+public/images/_source/
+
 # debug
 npm-debug.log*
 yarn-debug.log*

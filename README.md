@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mamma Luisa
 
-## Getting Started
+A from-scratch redesign of [mammaluisa.com](https://mammaluisa.com/) — cinematic editorial hospitality site for the Newport Italian restaurant.
 
-First, run the development server:
+## Stack
+
+- Next.js (App Router)
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Authentic photography and content from the live site
+
+## Develop
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run start
+```
 
-## Learn More
+## Content
 
-To learn more about Next.js, take a look at the following resources:
+Business copy, menu, and wine list live in `content/`:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `content/site.ts` — address, phone, hours, policies, links
+- `content/menu.ts` — full food menu
+- `content/wine.ts` — full red wine list (105 bottles)
+- `content/photos.ts` — gallery inventory
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Images are in `public/images/` (copied from the live WordPress media library).
 
-## Deploy on Vercel
+## Routes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Path | Purpose |
+|------|---------|
+| `/` | Evening narrative homepage |
+| `/menu` | Full food menu |
+| `/wine` | Red wine list |
+| `/photos` | Gallery + lightbox |
+| `/reservations` | Phone, Resy, policy |
+| `/contact` | Location, hours, map |
+| `/about` | Since 1992 story |
+| `/private-dining` | Private table inquire |
+| `/gift-certificates` | Square gift link |
